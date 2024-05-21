@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #D4E0F4;
+  font-family: "Neucha";
+}
+
+main {
+	padding-top: 120px;
+	width: 100%;
+}
+
+.upper-main{
+	padding-left: 100px;
+}
+/* CSS pour le contenu principal de la FAQ */
+
+/* Conteneur principal */
+.blocs {
+    display: flex;
+    flex-direction: column; /* Organisation en lignes */
+    gap: 20px; /* Espacement entre les lignes */
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    width: 80%; /* Ajustez la largeur du conteneur global */
+}
+
+/* Lignes individuelles */
+.faq-container1, .faq-container2 {
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les colonnes */
+    width: 100%; /* Assurez-vous que chaque conteneur remplit la largeur */
+}
+
+/* Colonnes individuelles */
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4ff; /* Couleur de fond des blocs */
+    border-radius: 10px;
+    padding: 20px;
+    width: 25%; /* Ajustez la largeur des blocs */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre pour l'esthétique */
+    text-align: center;
+}
+
+.faq-column img {
+    margin-bottom: 10px;
+}
+
+.faq-column h3 {
+    font-family: 'Neucha'; /* La police que vous avez importée */
+    color: #28274F; /* Ajustez la couleur du texte */
+    font-size: 18px; /* Ajustez la taille du texte */
+    margin: 10px 0 0;
+}
+
+.faq-column a {
+    text-decoration: none;
+    color: #28274F; /* Ajustez la couleur des liens */
+}
+
+.faq-column a:hover {
+    color: #5c67f2; /* Couleur de survol des liens */
+}
+
+
+/*----- Account Section -----*/
+
+.faq-section h1{
+	padding-left: 100px;
+}
+/* Style pour les boutons de l'accordéon */
+.accordion {
+    background-color: #f0f4ff;
+    color: #28274F;
+    cursor: pointer;
+    padding: 15px;
+    width: 50%;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    border-radius: 8px 8px 0 0; /* Coin supérieur arrondi, coin inférieur plat */
+    display: flex;
+    align-items: center;
+    font-family: "Neucha";
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion::after {
+    content: '\25B6'; /* Icône de flèche vers le bas */
+    color: #28274F;
+    margin-left: auto;
+}
+
+.accordion.active::after {
+    content: '\25BC'; /* Icône de flèche vers le haut */
+}
+
+/* Style pour les panneaux déroulants */
+.panel {
+    padding: 0 15px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 0 0 8px 8px; /* Coin supérieur plat, coin inférieur arrondi */
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    color: black;
+    width: 50%;
+}
+
+
+panel-content{
+	max-height: 200px; /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+    padding: 30px;
+    margin: 10px;
+    box-sizing: border-box; /* Assure que le padding ne déborde pas */
+}
